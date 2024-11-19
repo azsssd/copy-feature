@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <!-- コピーしたいテキストを入力する場所 -->
+    <input type="text" id="copyText" value="ここにコピーしたいテキストを入れる" />
+    
+    <!-- コピーするためのボタン -->
+    <button onclick="myFunction()">コピー</button>
+
+    <script>
+      function myFunction() {
+        var copyText = document.getElementById("copyText");  // コピーするテキストを探します
+        copyText.select();  // テキストを選びます
+        document.execCommand("copy");  // コピーを実行します
+        alert("コピーしました！");  // コピーしたことを知らせるメッセージ
+      }
+    </script>
+  </body>
+</html>
