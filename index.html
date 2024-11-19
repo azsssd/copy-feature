@@ -1,18 +1,22 @@
-<html>
-  <body>
-    <!-- コピーしたいテキストを入力する場所 -->
-    <input type="text" id="copyText" value="ここにコピーしたいテキストを入れる" />
-    
-    <!-- コピーするためのボタン -->
-    <button onclick="myFunction()">コピー</button>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>テキスト選択</title>
+</head>
+<body>
+  <div>
+    <p>以下のテキストを選択してコピーできます：</p>
+    <textarea id="selectableText" rows="4" cols="50">
+    ここに選択できるテキストが表示されます。
+    </textarea>
+  </div>
 
-    <script>
-      function myFunction() {
-        var copyText = document.getElementById("copyText");  // コピーするテキストを探します
-        copyText.select();  // テキストを選びます
-        document.execCommand("copy");  // コピーを実行します
-        alert("コピーしました！");  // コピーしたことを知らせるメッセージ
-      }
-    </script>
-  </body>
+  <script>
+    // テキストエリアの内容を選択する
+    const textarea = document.getElementById('selectableText');
+    textarea.select(); // ページが読み込まれた時にテキストを選択する
+  </script>
+</body>
 </html>
